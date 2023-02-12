@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
+body {
+    padding-top: 65px;
+    line-height: 1.5;
+    background-color: rgb(177, 193, 180);
+    color: rgb(33, 37, 41);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+h6 {
+    font-family: 'Corben', cursive;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: 700;
+}
+
+th,
+td {
+    border: 3px solid rgb(33, 37, 41);
+}
+
+
+a {
+    color: rgb(13, 110, 253);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(10, 88, 202);
+    text-decoration: underline;
+}
+
+
+.navbar {
+    padding-left: 12%;
+    padding-right: 12%;
+    box-shadow: 0px 3px 50px black;
+    text-align: center;
+}
+
+
+
+.content {
+    padding: 3% 20%;
+    font-family: 'Corben', cursive;
+    text-align: center;
+}
+
+@media (max-width:425px) {
+    .content {
+        padding: 7% 15%;
+
+    }
+}
+
+.intro {
+    background-color: rgb(33, 37, 41);
+    color: rgb(177, 193, 180);
+}
+
+.code {
+    font-family: 'Inconsolata', monospace;
+}
+
+.cta {
+    background-color: rgb(141, 164, 145);
+    color: #303030;
+    font-weight: 600;
+    padding: 25px 0 10px 0;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.share-icon {
+    color: rgb(33, 37, 41);
+    margin: 10px;
+    font-size: 20px;
+}

